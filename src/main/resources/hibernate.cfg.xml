@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">711191888</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+
+        <!--        <mapping class="example.Student"></mapping>-->
+        <!--        <mapping class="example.Course"></mapping>-->
+        <mapping class="relations.onetoone.Users"></mapping>
+        <mapping class="relations.onetoone.UserDetails"></mapping>
+        <mapping class="relations.onetomany.Person"></mapping>
+        <mapping class="relations.onetomany.Car"></mapping>
+        <mapping class="relations.manytomany.Student"></mapping>
+        <mapping class="relations.manytomany.Exam"></mapping>
+    </session-factory>
+</hibernate-configuration>
